@@ -91,3 +91,14 @@ python3 -m unittest discover -s tests -v
 
 
 탭 해제 수정과 포인터 표시의 비교 검증은 [터치 입력 검증](docs/touch-input.md)에 기록했습니다.
+
+## 라이선스
+
+이 저장소의 직접 작성한 도구·테스트·문서·메타데이터는 [MIT License](LICENSE)입니다. 아래 구성요소는 예외이거나 이 라이선스에 포함되지 않습니다.
+
+| 구성요소 | 라이선스 |
+| --- | --- |
+| [`emulator/firmware/`](emulator/firmware/)의 SeaBIOS 패치·설정 | LGPL-3.0-or-later. 대상 소스(SeaBIOS)의 라이선스를 따르며 같은 폴더의 `COPYING.LESSER`, `COPYING`에 전문이 있습니다. |
+| [`emulator/qemu-build/usb-touchscreen.patch`](emulator/qemu-build/usb-touchscreen.patch) | 대상 파일 `hw/usb/dev-hid.c`의 MIT 라이선스를 따릅니다. 패치를 적용한 QEMU 전체는 GPL-2.0입니다. 이 저장소는 QEMU 바이너리를 배포하지 않습니다. |
+| QEMU·SeaBIOS·Open-Mobile-Emulator 체크아웃 | 저장소에 포함하지 않습니다. 각 프로젝트의 라이선스를 따릅니다. Open-Mobile-Emulator(GPL-2.0)는 구조 참고용이며 코드를 재사용하지 않았습니다. |
+| Windows 10 Mobile SDK 및 게스트 이미지 | 저장소에 포함하지 않습니다. Microsoft의 약관을 따르며 이 저장소의 라이선스와 무관합니다. |
