@@ -1,0 +1,107 @@
+{
+  "date": "2026-11-05",
+  "files": [
+    {
+      "file": "boot-bios-01.png",
+      "sha256": "7bf7eb2b431382f37e747bb6c520a5a460a2ac7d3b05af75db8913875e4434f2",
+      "original_path_at_capture": "runtime/boot-bios-01.png",
+      "note": "Byte-for-byte copy; historical embedded paths retained."
+    },
+    {
+      "file": "boot-kvm-01.png",
+      "sha256": "a3407ac9e785f9758187889c63bdf555f26ea8e42b1c9569f5d40215e0a26332",
+      "original_path_at_capture": "runtime/boot-kvm-01.png",
+      "note": "Byte-for-byte copy; historical embedded paths retained."
+    },
+    {
+      "file": "portrait-rom-01.png",
+      "sha256": "a581ccd34a386e634aef8d5c88ce9878bff316f686b8d05be7225b008d65e84e",
+      "original_path_at_capture": "runtime/portrait-rom-01.png",
+      "note": "Byte-for-byte copy; historical embedded paths retained."
+    },
+    {
+      "file": "portrait-native-01.png",
+      "sha256": "15021eb30cbce0b555c0ac4b945d944a3746cbaa82f6ab3bca31209b36bb452a",
+      "original_path_at_capture": "runtime/portrait-native-01.png",
+      "note": "Byte-for-byte copy; historical embedded paths retained."
+    },
+    {
+      "file": "gtk-50pct-02.png",
+      "sha256": "79d6133bc4a8c9b537e4b0c0afc1c856c5fedf1dff4da8f13cd47a1c84a457b3",
+      "original_path_at_capture": "runtime/gtk-50pct-02.png",
+      "note": "Byte-for-byte copy; historical embedded paths retained."
+    },
+    {
+      "file": "controls-visible.png",
+      "sha256": "32612c5e09bc7d1a10a8468c76436240932f8756a4c851b22c1936a6cb6f4e9d",
+      "original_path_at_capture": "runtime/controls-visible.png",
+      "note": "Byte-for-byte copy; historical embedded paths retained."
+    },
+    {
+      "file": "controls-vertical-final.png",
+      "sha256": "5b91f596c9a221795da3dbd65a5a0785f13efc428182270c6b6e5795d8672b7b",
+      "original_path_at_capture": "runtime/controls-vertical-final.png",
+      "note": "Byte-for-byte copy; historical embedded paths retained."
+    },
+    {
+      "file": "dpi-slider-tooltip.png",
+      "sha256": "3b8e9174af1ebf7f25b09b384fea08c4c1ac98e262032d2310819fab2739e695",
+      "original_path_at_capture": "runtime/dpi-slider-tooltip.png",
+      "note": "Byte-for-byte copy; historical embedded paths retained."
+    },
+    {
+      "file": "dpi-tooltip-detail.png",
+      "sha256": "7d3221c0103a2ddcc65936c5f174f5c1affd3ddb36032b1de169af8616b7924c",
+      "original_path_at_capture": "runtime/dpi-tooltip-detail.png",
+      "note": "Byte-for-byte copy; historical embedded paths retained."
+    },
+    {
+      "file": "dpi250-after-reboot.png",
+      "sha256": "dc1a778391e080930d5489747a29185d308118db9f26edeffeec10d4c2efd202",
+      "original_path_at_capture": "runtime/dpi250-after-reboot.png",
+      "note": "Byte-for-byte copy; historical embedded paths retained."
+    },
+    {
+      "file": "touch-before.png",
+      "sha256": "968606a10bce2ce3f1b5b2088c291e5933a70c8a3666d1828b5b835d9a182155",
+      "original_path_at_capture": "runtime/touch-before.png",
+      "note": "Byte-for-byte copy; historical embedded paths retained."
+    },
+    {
+      "file": "touch-after.png",
+      "sha256": "b4c1e1f944a62e5e5c00d0490bac68d202901fb0da4df14c41b661b829792c8c",
+      "original_path_at_capture": "runtime/touch-after.png",
+      "note": "Byte-for-byte copy; historical embedded paths retained."
+    },
+    {
+      "file": "gtk-drag-verified.png",
+      "sha256": "59d88d885406b378416028906ca9d0af674a4ed967a0c0de6cbdf290c2ce88b7",
+      "original_path_at_capture": "runtime/gtk-drag-verified.png",
+      "note": "Byte-for-byte copy; historical embedded paths retained."
+    },
+    {
+      "file": "direct-volume-final.png",
+      "sha256": "81d1f96a80718192eca805ae4b2a4ff703a2ab9bcb694c7aaf4fa24585e04f70",
+      "original_path_at_capture": "runtime/direct-volume-final.png",
+      "note": "Byte-for-byte copy; historical embedded paths retained."
+    },
+    {
+      "file": "shortcut-volume-final.png",
+      "sha256": "de20cf7160fd36513a5f4974795493b6dc0a9ca29f4995a22351ddbb570e0da2",
+      "original_path_at_capture": "runtime/shortcut-volume-final.png",
+      "note": "Byte-for-byte copy; historical embedded paths retained."
+    },
+    {
+      "file": "audio-smoke.wav",
+      "sha256": "24aa24282f6aa3b05dd58de00fa3a225311bbf32a82088fc363e5cfefe88e9ea",
+      "original_path_at_capture": "runtime/audio-smoke.wav",
+      "note": "Byte-for-byte copy; historical embedded paths retained."
+    },
+    {
+      "file": "display-input-validation.json",
+      "sha256": "af44848c9992166e3a520ccbbe45142e746789b717296811b4446510128fe0e0",
+      "original_path_at_capture": "runtime/display-input-validation.json",
+      "note": "Byte-for-byte copy; historical embedded paths retained."
+    }
+  ]
+}

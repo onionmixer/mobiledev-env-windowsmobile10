@@ -1,0 +1,454 @@
+{
+  "version": "10.0.14393.0",
+  "source": "https://learn.microsoft.com/en-us/windows/apps/windows-sdk/downloads-archive",
+  "setup_url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/EmulatorSetup.exe",
+  "setup_sha256": "6e09c748550d14a21cee4efab8c59836542f20453a61f4adc682bd0d90ffe5ac",
+  "payloads": [
+    {
+      "path": "Redistributable/1.0.0.0/Vhd1.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd1.cab",
+      "size": 103207533,
+      "sha1_from_bootstrapper": "638458657a5aa2466ac63c03b3a1d1f39b64bfc3"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd2.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd2.cab",
+      "size": 64788640,
+      "sha1_from_bootstrapper": "8e8884b825c74f32bbb532c90034c599d3ff6fcf"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd3.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd3.cab",
+      "size": 84138502,
+      "sha1_from_bootstrapper": "6e96cefe2baa77c0b95b596b1f5e6362b403fb77"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd4.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd4.cab",
+      "size": 97821818,
+      "sha1_from_bootstrapper": "f3e1bb0fc46be0bab26c72788d0c8b7e3d0eeaf1"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd5.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd5.cab",
+      "size": 96399891,
+      "sha1_from_bootstrapper": "8d3cbfb4bde07f75ba77af331bd006dd4f2a3a56"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd6.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd6.cab",
+      "size": 38052058,
+      "sha1_from_bootstrapper": "589fd3466c32751cd1100a0171e376ea6ec3b6de"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd7.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd7.cab",
+      "size": 94177738,
+      "sha1_from_bootstrapper": "0c418cf6edb4cc1a1486201530fea874bd160850"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd8.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd8.cab",
+      "size": 101702197,
+      "sha1_from_bootstrapper": "5b8181b9c4af536f3cb40624574a40449d426da4"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd9.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd9.cab",
+      "size": 91078317,
+      "sha1_from_bootstrapper": "c7ac3cf76401dee3adec10bbaf21bc5e30f17f5f"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd10.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd10.cab",
+      "size": 91426766,
+      "sha1_from_bootstrapper": "b273491b8de4f21a2447bce51126eedea2ba890d"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd11.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd11.cab",
+      "size": 93899663,
+      "sha1_from_bootstrapper": "10d02a1603e600823f9cfc1904636d3a70ae02b3"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd12.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd12.cab",
+      "size": 83955066,
+      "sha1_from_bootstrapper": "a0b817425cdd8e5d426d7c7930f163a2f3e1e9a3"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd13.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd13.cab",
+      "size": 65863922,
+      "sha1_from_bootstrapper": "5b2bdd5d39c1961fc836df3f7587bc7e55e9f7a7"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd14.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd14.cab",
+      "size": 103081063,
+      "sha1_from_bootstrapper": "c4ca09723933a8f4edc0a55d2ae36961b811fe05"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd15.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd15.cab",
+      "size": 97234303,
+      "sha1_from_bootstrapper": "509e99c6353d3692f132af9ffba982cafc23b6ba"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd16.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd16.cab",
+      "size": 6597441,
+      "sha1_from_bootstrapper": "f5873a6111570ebb79832fd17f2a517a98076a5d"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd17.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd17.cab",
+      "size": 101438509,
+      "sha1_from_bootstrapper": "91da5d8d11dc4698e0fd1575b42b8f64283455be"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd18.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd18.cab",
+      "size": 54950137,
+      "sha1_from_bootstrapper": "72330d548972540ee87064a172fe1e3549019236"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd19.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd19.cab",
+      "size": 81576496,
+      "sha1_from_bootstrapper": "84ff8fb5658d7c5744334e2dabf75ae646ae4602"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd20.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd20.cab",
+      "size": 95654487,
+      "sha1_from_bootstrapper": "111673e860260a4473a3ba56bef1df0342b9b1b3"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd21.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd21.cab",
+      "size": 96652337,
+      "sha1_from_bootstrapper": "923108a88bac377ec0a650499f645f233d875c29"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd22.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd22.cab",
+      "size": 90882762,
+      "sha1_from_bootstrapper": "1f797b0891d29c2fc7c2f4f11e92b3830b0c8ffe"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd23.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd23.cab",
+      "size": 91098356,
+      "sha1_from_bootstrapper": "a876960da3adb9fa35b71cd0c6ada64e43e0792d"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd24.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd24.cab",
+      "size": 26655130,
+      "sha1_from_bootstrapper": "9354fdc82180d3acea6d61a6ef7656023d979ca0"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd25.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd25.cab",
+      "size": 76663823,
+      "sha1_from_bootstrapper": "91e338a309bf90ea546f6da48a4071f97fc5bb99"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd26.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd26.cab",
+      "size": 79258468,
+      "sha1_from_bootstrapper": "628a8a7b40fbb13c22f11f2b93e69bbc9e8c0690"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd27.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd27.cab",
+      "size": 89,
+      "sha1_from_bootstrapper": "b9b08999dd9583637e16acdc357e058e31ec6032"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd28.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd28.cab",
+      "size": 89,
+      "sha1_from_bootstrapper": "4f81d173b46d740b57d3934f93c94a2386684eb7"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd29.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd29.cab",
+      "size": 89,
+      "sha1_from_bootstrapper": "d2ced65474992ec38f4740ff43772efdbf4a8ff2"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd30.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd30.cab",
+      "size": 89,
+      "sha1_from_bootstrapper": "51b16cce34965c171258f34a197fb1b7a417bc81"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd31.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd31.cab",
+      "size": 89,
+      "sha1_from_bootstrapper": "91341af975d38cf7766b6221fddd43c712b8ad59"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd32.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd32.cab",
+      "size": 89,
+      "sha1_from_bootstrapper": "40d9abec1bd033e728f61b9b68e19a8eb7ec662e"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd33.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd33.cab",
+      "size": 89,
+      "sha1_from_bootstrapper": "f0b6cb4c91a9a68571d5f628841a4ee418762de8"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd34.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd34.cab",
+      "size": 89,
+      "sha1_from_bootstrapper": "f8c2935b29f6d4a0e113922dcf179a36a7dce416"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd35.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd35.cab",
+      "size": 89,
+      "sha1_from_bootstrapper": "d79094c2da95f77cdcb6df395d8e93bf556b772f"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd36.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd36.cab",
+      "size": 89,
+      "sha1_from_bootstrapper": "960f72eb77f3007080c90b9b93a30b6f7afaf32f"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd37.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd37.cab",
+      "size": 89,
+      "sha1_from_bootstrapper": "a50f76f93fe6fd584ef415d47eca60d2a03235cf"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd38.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd38.cab",
+      "size": 89,
+      "sha1_from_bootstrapper": "f2567e39bc909a20a2369baea0eef8501b526503"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd39.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd39.cab",
+      "size": 89,
+      "sha1_from_bootstrapper": "7014b41ead1a289cf80ff9e66abbbc4ede319dcb"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd40.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd40.cab",
+      "size": 89,
+      "sha1_from_bootstrapper": "42d8d18be756988ac675385a0cf5c8b199daa5f2"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd41.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd41.cab",
+      "size": 89,
+      "sha1_from_bootstrapper": "fc6ed79933801e74a72fe2f940bb1d4689a25ee5"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd42.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd42.cab",
+      "size": 89,
+      "sha1_from_bootstrapper": "391e8ac318e422522b94e5d26ee67b763baaf0ff"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd43.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd43.cab",
+      "size": 89,
+      "sha1_from_bootstrapper": "7801df9810175683f3e351c8f4e49b24538e099a"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd44.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd44.cab",
+      "size": 89,
+      "sha1_from_bootstrapper": "52ea43368d92b8ef45b85dffcf15fa944176794d"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd45.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd45.cab",
+      "size": 89,
+      "sha1_from_bootstrapper": "f265dfe39add88e8770bd2d7a26116873c7ba86d"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd46.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd46.cab",
+      "size": 89,
+      "sha1_from_bootstrapper": "2317660e5817d33a18c7cd6bbec07be3884fd20b"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd47.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd47.cab",
+      "size": 89,
+      "sha1_from_bootstrapper": "84a9e76a47273cd3cff21b3fe91d9fbac867332f"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd48.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd48.cab",
+      "size": 89,
+      "sha1_from_bootstrapper": "bf4627534b114342c548a5b4619896bf806f43b3"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd49.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd49.cab",
+      "size": 89,
+      "sha1_from_bootstrapper": "d983c0be673e30bf39ac5e470e7d10f91f933069"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/Vhd50.cab",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/Vhd50.cab",
+      "size": 89,
+      "sha1_from_bootstrapper": "1175f8073b51f1c4d237169e4ebd38e1f41d96a5"
+    },
+    {
+      "path": "Redistributable/1.0.0.0/WindowsPhoneSDK-VHD.msi",
+      "url": "https://download.microsoft.com/download/F/0/7/F0738768-AE4F-473F-B37E-6DB641D97588/emulator/Redistributable/1.0.0.0/WindowsPhoneSDK-VHD.msi",
+      "size": 421888,
+      "sha1_from_bootstrapper": "398f02d67e5918f9f52f4be63dc69b60567a8c92"
+    }
+  ],
+  "image_fragments": [
+    {
+      "sequence": 1,
+      "file": "lf380B904B70F5C04B20AA38C69BEFA888",
+      "parent": "FLASH_VHD"
+    },
+    {
+      "sequence": 2,
+      "file": "lfB3FB29C5DF21A09BA29AB99F83C1A479",
+      "parent": "FLASH_VHD"
+    },
+    {
+      "sequence": 3,
+      "file": "lfD2AA649D26E4E9F21DC6378CDD1A1F25",
+      "parent": "FLASH_VHD"
+    },
+    {
+      "sequence": 4,
+      "file": "lf6D71756E412DF2CBBAE09D1A3EA55309",
+      "parent": "FLASH_VHD"
+    },
+    {
+      "sequence": 5,
+      "file": "lfF29BF96B42981EFDB7F1ECC3CFABF5E0",
+      "parent": "FLASH_VHD"
+    },
+    {
+      "sequence": 6,
+      "file": "lf07B88EC972EC927FB18DCA3912763D87",
+      "parent": "FLASH_VHD"
+    },
+    {
+      "sequence": 7,
+      "file": "lf9B4AB4EA25685EB6A976C8122E2FC78F",
+      "parent": "FLASH_VHD"
+    },
+    {
+      "sequence": 8,
+      "file": "lfE6B586BADDC1D3E12EB9934DD343789F",
+      "parent": "FLASH_VHD"
+    },
+    {
+      "sequence": 9,
+      "file": "lf4D36EB70B87A03B7D7F26A7B83E148E1",
+      "parent": "FLASH_VHD"
+    },
+    {
+      "sequence": 10,
+      "file": "lf4662EB46FF2C0AB6B9189EC054222E0D",
+      "parent": "FLASH_VHD"
+    },
+    {
+      "sequence": 11,
+      "file": "lf9CA251EC56AFA9B54634001261FFF6C2",
+      "parent": "FLASH_VHD"
+    },
+    {
+      "sequence": 12,
+      "file": "lf9335576268EC02BDC2B6247EFC20351F",
+      "parent": "FLASH_VHD"
+    },
+    {
+      "sequence": 13,
+      "file": "lf26A0C1F05322F505621D052EEFA35D2A",
+      "parent": "FLASH_VHD"
+    },
+    {
+      "sequence": 14,
+      "file": "lf2ADF2ECA376E644DF5F006DDEDDDE8B5",
+      "parent": "FLASH_VHD"
+    },
+    {
+      "sequence": 15,
+      "file": "lfA2DCAA4D40BAC9F679307C815AE21177",
+      "parent": "FLASH_VHD"
+    },
+    {
+      "sequence": 16,
+      "file": "lf2670945BB5CF856CB350BB306B227333",
+      "parent": "FLASH_VHD"
+    },
+    {
+      "sequence": 17,
+      "file": "lf9B17EB7397B95A5A05FE801803A62DF7",
+      "parent": "FLASH_VHD"
+    },
+    {
+      "sequence": 18,
+      "file": "lf025ADB9D675005D01B70307FAF35311F",
+      "parent": "FLASH_VHD"
+    },
+    {
+      "sequence": 19,
+      "file": "lf42CD0A1BE0B7FA5E52115FE8BB33EC6C",
+      "parent": "FLASH_VHD"
+    },
+    {
+      "sequence": 20,
+      "file": "lf7AEB9BBBA702A348416D0F188B8EAE02",
+      "parent": "FLASH_VHD"
+    },
+    {
+      "sequence": 21,
+      "file": "lfA137C84B2A65F5AAE3172CC13319F969",
+      "parent": "FLASH_VHD"
+    },
+    {
+      "sequence": 22,
+      "file": "lf3FC1C791E1725C022879DEB29382B1AD",
+      "parent": "FLASH_VHD"
+    },
+    {
+      "sequence": 23,
+      "file": "lf7900989DF65B1502FB8078B00DFDA200",
+      "parent": "FLASH_VHD"
+    },
+    {
+      "sequence": 24,
+      "file": "lfD7C6C446DB313E9BE2FAD3A21F53EA51",
+      "parent": "FLASH_VHD"
+    },
+    {
+      "sequence": 25,
+      "file": "lf5715AB45CCBD51583C17D0E4293ABBAF",
+      "parent": "FLASH_VHD"
+    },
+    {
+      "sequence": 26,
+      "file": "lf97370691C52FA6D24F2FA3565494D012",
+      "parent": "FLASH_VHD"
+    }
+  ],
+  "fragment_order_source": "WindowsPhoneSDK-VHD.msi, LargeFileFragments table, Sequence column (32-bit MSI integer)",
+  "assembled_image": {
+    "filename": "flash.vhd",
+    "size": 2658107392,
+    "virtual_size": 10737418240,
+    "sha256": "b990f599b1496d9ae86204150dd8a1ee8a8bf963b439d518b50d04446fdaf913",
+    "note": "Locally observed after verifying all 51 official SDK payloads and assembling in MSI LargeFileFragments.Sequence order."
+  }
+}

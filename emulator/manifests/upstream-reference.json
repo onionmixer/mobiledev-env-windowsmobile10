@@ -1,0 +1,19 @@
+{
+  "repository": "https://github.com/115dkk/Open-Mobile-Emulator",
+  "commit": "1a739ac835219cc79038ff171aff04454e01fd3a",
+  "local_checkout": "emulator/third_party/Open-Mobile-Emulator",
+  "reviewed_files": [
+    "README.md",
+    "launcher/Start-Guest.ps1",
+    "launcher/OME.Common.psm1",
+    "qemu-build/pins.env",
+    "manifests/device-profile.prop"
+  ],
+  "reused_design": [
+    "External guest artifact manifest and verification",
+    "Separate reference image and working disk",
+    "QEMU process boundary and QMP control",
+    "Argument logging and host readiness checks"
+  ],
+  "implementation": "New Python preparation and diagnostic launcher; upstream checkout is unchanged. Android guest, ARM native bridge, adb and Android-specific virtio settings are not used."
+}

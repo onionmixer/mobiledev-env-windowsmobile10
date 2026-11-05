@@ -1,0 +1,24 @@
+diff --git a/vgasrc/cbvga.c b/vgasrc/cbvga.c
+index b919137..886338d 100644
+--- a/vgasrc/cbvga.c
++++ b/vgasrc/cbvga.c
+@@ -27,6 +27,10 @@ struct vgamode_s *cbvga_find_mode(int mode)
+     if (mode == 0x03)
+         return &CBemulinfo;
+ 
++    /* A fixed Bochs framebuffer must expose its native geometry only. */
++    if (CONFIG_DISPLAY_BOCHS)
++        return NULL;
++
+     int i;
+     for (i = 0; i < GET_GLOBAL(svga_mcount); i++) {
+         struct generic_svga_mode *cbmode_g = &svga_modes[i];
+@@ -43,7 +47,7 @@ cbvga_list_modes(u16 seg, u16 *dest, u16 *last)
+ {
+     int seen = 0;
+ 
+-    if (GET_GLOBAL(CBmode) != 0x3) {
++    if (!CONFIG_DISPLAY_BOCHS && GET_GLOBAL(CBmode) != 0x3) {
+         /* Advertise additional SVGA modes for Microsoft NTLDR graphical mode.
+          * Microsoft NTLDR:
+          * + Graphical mode uses a maximum resolution of 1600x1200.

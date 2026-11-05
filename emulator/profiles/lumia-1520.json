@@ -1,0 +1,64 @@
+{
+  "name": "Lumia 1520 app development reference",
+  "device": {
+    "manufacturer": "Nokia",
+    "model": "Lumia 1520",
+    "soc": "Qualcomm Snapdragon 800",
+    "architecture": "ARMv7 (32-bit)",
+    "ram_mib": 2048,
+    "display_pixels_portrait": [
+      1080,
+      1920
+    ],
+    "display_inches": 6.0,
+    "source": "https://blogs.windows.com/devices/2013/10/22/standing-tall-the-nokia-lumia-1520-and-lumia-1320/",
+    "physical_ppi": 367.15
+  },
+  "guest": {
+    "os": "Windows 10 Mobile SDK emulator",
+    "version": "10.0.14393.0",
+    "architecture": "x86",
+    "machine": "pc",
+    "ram_mib": 2048,
+    "vcpus": 4,
+    "validated_display_pixels": [
+      1080,
+      1920
+    ],
+    "status": "KVM Start screen, native portrait display, guest UI 250%, GTK 50% and single-contact touch observed. Device Portal initial authentication page reached; pairing and user app deployment untested. Audio PCM captured on earlier Ubuntu QEMU, not retested on the custom build.",
+    "ui_scale_percent": 250,
+    "logical_dpi": 240,
+    "effective_pixels": [
+      432,
+      768
+    ],
+    "ui_scale_source": "https://download.microsoft.com/download/E/B/4/EB41BB72-7447-4B42-8E16-9C520CF3A16D/WIN010_shintak_FINAL.pdf",
+    "input_device": "usb-touchscreen (one contact)",
+    "ui_scale_application": "Applied manually in Windows settings to the current writable overlay; fresh SDK imports require configuration.",
+    "logical_metrics_note": "logical_dpi and effective_pixels are calculated from 250% scale, not measured using a guest app API.",
+    "touch_validation": "QMP and GTK Phone-tile taps, GTK keypad taps (80ms and 20ms), QMP and GTK drag verified after Confidence-on-lift fix."
+  },
+  "limitations": [
+    "This profile is not a QEMU Snapdragon 800 or Lumia board implementation.",
+    "ARM-only packages require an x86 rebuild for the SDK guest.",
+    "Camera, modem, sensors, GPU performance and physical-device behavior require separate validation.",
+    "Touch input supports one contact. Multi-touch and pinch gestures are not implemented."
+  ],
+  "host_display": {
+    "gtk_scale": 0.5,
+    "viewport_pixels": [
+      540,
+      960
+    ],
+    "controls": {
+      "layout": "vertical",
+      "pixels": [
+        104,
+        400
+      ],
+      "side": "right, or left if needed"
+    },
+    "show_cursor": true
+  },
+  "configuration_note": "Descriptive profile and validation record; the launcher does not automatically apply every field."
+}

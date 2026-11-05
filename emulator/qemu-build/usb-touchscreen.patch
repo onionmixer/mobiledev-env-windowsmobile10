@@ -1,0 +1,216 @@
+diff --git a/hw/usb/dev-hid.c b/hw/usb/dev-hid.c
+index 1c7ae97..c7665dc 100644
+--- a/hw/usb/dev-hid.c
++++ b/hw/usb/dev-hid.c
+@@ -43,6 +43,7 @@ struct USBHIDState {
+     uint32_t usb_version;
+     char *display;
+     uint32_t head;
++    bool touchscreen;
+ };
+ 
+ #define TYPE_USB_HID "usb-hid"
+@@ -60,6 +61,9 @@ enum {
+     STR_SERIAL_MOUSE,
+     STR_SERIAL_TABLET,
+     STR_SERIAL_KEYBOARD,
++    STR_PRODUCT_TOUCHSCREEN,
++    STR_CONFIG_TOUCHSCREEN,
++    STR_SERIAL_TOUCHSCREEN,
+ };
+ 
+ static const USBDescStrings desc_strings = {
+@@ -74,6 +78,79 @@ static const USBDescStrings desc_strings = {
+     [STR_SERIAL_MOUSE]     = "89126",
+     [STR_SERIAL_TABLET]    = "28754",
+     [STR_SERIAL_KEYBOARD]  = "68284",
++    [STR_PRODUCT_TOUCHSCREEN] = "QEMU USB Touchscreen",
++    [STR_CONFIG_TOUCHSCREEN] = "HID Touchscreen",
++    [STR_SERIAL_TOUCHSCREEN] = "lumia-touch-1",
++};
++
++/* Single-contact Windows-compatible digitizer, using tablet coordinates. */
++static const uint8_t qemu_touchscreen_hid_report_descriptor[] = {
++    0x05, 0x0d, 0x09, 0x04, 0xa1, 0x01, 0x85, 0x01,
++    0x09, 0x22, 0xa1, 0x02,
++    0x09, 0x42, 0x09, 0x32, 0x09, 0x47,
++    0x15, 0x00, 0x25, 0x01, 0x75, 0x01, 0x95, 0x03, 0x81, 0x02,
++    0x75, 0x05, 0x95, 0x01, 0x81, 0x03,
++    0x09, 0x51, 0x25, 0x7f, 0x75, 0x08, 0x95, 0x01, 0x81, 0x02,
++    0x05, 0x01, 0x15, 0x00, 0x26, 0xff, 0x7f,
++    0x35, 0x00, 0x55, 0x0d, 0x65, 0x11,
++    0x09, 0x30, 0x46, 0x4c, 0x1d, 0x75, 0x10, 0x95, 0x01, 0x81, 0x02,
++    0x09, 0x31, 0x46, 0x15, 0x34, 0x81, 0x02,
++    0x55, 0x00, 0x65, 0x00, 0xc0,
++    0x05, 0x0d, 0x09, 0x56, 0x55, 0x0c, 0x66, 0x01, 0x10,
++    0x15, 0x00, 0x27, 0xff, 0xff, 0x00, 0x00,
++    0x35, 0x00, 0x47, 0xff, 0xff, 0x00, 0x00,
++    0x75, 0x10, 0x95, 0x01, 0x81, 0x02,
++    0x55, 0x00, 0x65, 0x00,
++    0x05, 0x0d, 0x09, 0x54, 0x15, 0x00, 0x25, 0x01,
++    0x75, 0x08, 0x95, 0x01, 0x81, 0x02,
++    0x85, 0x02, 0x09, 0x55, 0x25, 0x01, 0xb1, 0x02, 0xc0,
++};
++
++static const USBDescIface desc_iface_touchscreen = {
++    .bInterfaceNumber = 0,
++    .bNumEndpoints = 1,
++    .bInterfaceClass = USB_CLASS_HID,
++    .ndesc = 1,
++    .descs = (USBDescOther[]) {{
++        .data = (uint8_t[]) {
++            9, USB_DT_HID, 0x11, 0x01, 0, 1, USB_DT_REPORT,
++            sizeof(qemu_touchscreen_hid_report_descriptor), 0,
++        },
++    }},
++    .eps = (USBDescEndpoint[]) {{
++        .bEndpointAddress = USB_DIR_IN | 1,
++        .bmAttributes = USB_ENDPOINT_XFER_INT,
++        .wMaxPacketSize = 16,
++        .bInterval = 5,
++    }},
++};
++
++static const USBDescDevice desc_device_touchscreen = {
++    .bcdUSB = 0x0100,
++    .bMaxPacketSize0 = 8,
++    .bNumConfigurations = 1,
++    .confs = (USBDescConfig[]) {{
++        .bNumInterfaces = 1,
++        .bConfigurationValue = 1,
++        .iConfiguration = STR_CONFIG_TOUCHSCREEN,
++        .bmAttributes = USB_CFG_ATT_ONE | USB_CFG_ATT_WAKEUP,
++        .bMaxPower = 50,
++        .nif = 1,
++        .ifs = &desc_iface_touchscreen,
++    }},
++};
++
++static const USBDesc desc_touchscreen = {
++    .id = {
++        .idVendor = 0x0627,
++        .idProduct = 0x0011,
++        .bcdDevice = 0x0100,
++        .iManufacturer = STR_MANUFACTURER,
++        .iProduct = STR_PRODUCT_TOUCHSCREEN,
++        .iSerialNumber = STR_SERIAL_TOUCHSCREEN,
++    },
++    .full = &desc_device_touchscreen,
++    .str = desc_strings,
+ };
+ 
+ static const USBDescIface desc_iface_mouse = {
+@@ -572,6 +649,30 @@ static void usb_hid_handle_reset(USBDevice *dev)
+     hid_reset(&us->hid);
+ }
+ 
++static int usb_hid_pointer_poll(USBHIDState *us, uint8_t *data, int length)
++{
++    uint8_t tablet[8] = {0};
++    uint8_t report[10];
++    uint16_t scan_time;
++
++    if (!us->touchscreen) {
++        return hid_pointer_poll(&us->hid, data, length);
++    }
++    hid_pointer_poll(&us->hid, tablet, sizeof(tablet));
++    report[0] = 1;
++    /* Keep Confidence set through lift: clearing it cancels a Windows tap. */
++    report[1] = 4 | ((tablet[0] & 1) ? 3 : 0);
++    report[2] = 0;
++    memcpy(report + 3, tablet + 1, 4);
++    scan_time = qemu_clock_get_ms(QEMU_CLOCK_VIRTUAL) * 10;
++    report[7] = scan_time & 0xff;
++    report[8] = scan_time >> 8;
++    report[9] = 1; /* Includes the final tip-up report for the contact. */
++    length = MIN(length, sizeof(report));
++    memcpy(data, report, length);
++    return length;
++}
++
+ static void usb_hid_handle_control(USBDevice *dev, USBPacket *p,
+                int request, int value, int index, int length, uint8_t *data)
+ {
+@@ -589,7 +690,11 @@ static void usb_hid_handle_control(USBDevice *dev, USBPacket *p,
+     case InterfaceRequest | USB_REQ_GET_DESCRIPTOR:
+         switch (value >> 8) {
+         case 0x22:
+-            if (hs->kind == HID_MOUSE) {
++            if (us->touchscreen) {
++                memcpy(data, qemu_touchscreen_hid_report_descriptor,
++                       sizeof(qemu_touchscreen_hid_report_descriptor));
++                p->actual_length = sizeof(qemu_touchscreen_hid_report_descriptor);
++            } else if (hs->kind == HID_MOUSE) {
+                 memcpy(data, qemu_mouse_hid_report_descriptor,
+                        sizeof(qemu_mouse_hid_report_descriptor));
+                 p->actual_length = sizeof(qemu_mouse_hid_report_descriptor);
+@@ -608,8 +713,12 @@ static void usb_hid_handle_control(USBDevice *dev, USBPacket *p,
+         }
+         break;
+     case HID_GET_REPORT:
+-        if (hs->kind == HID_MOUSE || hs->kind == HID_TABLET) {
+-            p->actual_length = hid_pointer_poll(hs, data, length);
++        if (us->touchscreen && (value >> 8) == 3 && (value & 0xff) == 2) {
++            data[0] = 2;
++            data[1] = 1;
++            p->actual_length = MIN(length, 2);
++        } else if (hs->kind == HID_MOUSE || hs->kind == HID_TABLET) {
++            p->actual_length = usb_hid_pointer_poll(us, data, length);
+         } else if (hs->kind == HID_KEYBOARD) {
+             p->actual_length = hid_keyboard_poll(hs, data, length);
+         }
+@@ -671,7 +780,7 @@ static void usb_hid_handle_data(USBDevice *dev, USBPacket *p)
+             }
+             hid_set_next_idle(hs);
+             if (hs->kind == HID_MOUSE || hs->kind == HID_TABLET) {
+-                len = hid_pointer_poll(hs, buf, p->iov.size);
++                len = usb_hid_pointer_poll(us, buf, p->iov.size);
+             } else if (hs->kind == HID_KEYBOARD) {
+                 len = hid_keyboard_poll(hs, buf, p->iov.size);
+             }
+@@ -736,6 +845,13 @@ static void usb_mouse_realize(USBDevice *dev, Error **errp)
+     usb_hid_initfn(dev, HID_MOUSE, &desc_mouse, &desc_mouse2, errp);
+ }
+ 
++static void usb_touchscreen_realize(USBDevice *dev, Error **errp)
++{
++    USBHIDState *us = USB_HID(dev);
++    us->touchscreen = true;
++    usb_hid_initfn(dev, HID_TABLET, &desc_touchscreen, &desc_touchscreen, errp);
++}
++
+ static void usb_keyboard_realize(USBDevice *dev, Error **errp)
+ {
+     usb_hid_initfn(dev, HID_KEYBOARD, &desc_keyboard, &desc_keyboard2, errp);
+@@ -818,6 +934,23 @@ static const TypeInfo usb_tablet_info = {
+     .class_init    = usb_tablet_class_initfn,
+ };
+ 
++static void usb_touchscreen_class_initfn(ObjectClass *klass, void *data)
++{
++    DeviceClass *dc = DEVICE_CLASS(klass);
++    USBDeviceClass *uc = USB_DEVICE_CLASS(klass);
++    uc->realize = usb_touchscreen_realize;
++    uc->product_desc = "QEMU USB Touchscreen";
++    dc->vmsd = &vmstate_usb_ptr;
++    device_class_set_props(dc, usb_tablet_properties);
++    set_bit(DEVICE_CATEGORY_INPUT, dc->categories);
++}
++
++static const TypeInfo usb_touchscreen_info = {
++    .name = "usb-touchscreen",
++    .parent = TYPE_USB_HID,
++    .class_init = usb_touchscreen_class_initfn,
++};
++
+ static Property usb_mouse_properties[] = {
+         DEFINE_PROP_UINT32("usb_version", USBHIDState, usb_version, 2),
+         DEFINE_PROP_END_OF_LIST(),
+@@ -869,6 +1002,7 @@ static void usb_hid_register_types(void)
+ {
+     type_register_static(&usb_hid_type_info);
+     type_register_static(&usb_tablet_info);
++    type_register_static(&usb_touchscreen_info);
+     usb_legacy_register("usb-tablet", "tablet", NULL);
+     type_register_static(&usb_mouse_info);
+     usb_legacy_register("usb-mouse", "mouse", NULL);

@@ -1,0 +1,9 @@
+{
+  "repository": "https://github.com/qemu/qemu.git",
+  "version": "v6.2.0",
+  "commit": "44f28df24767cf9dca1ddc9b23157737c4cbb645",
+  "patch": "emulator/qemu-build/usb-touchscreen.patch",
+  "build_script": "tools/build_touch_qemu.sh",
+  "device": "usb-touchscreen",
+  "description": "Single-contact USB HID digitizer. Keeps Confidence asserted through lift to allow Windows taps. GTK/QMP left-button down, absolute motion and release are reported as touch contact events. Standard usb-tablet remains available."
+}
